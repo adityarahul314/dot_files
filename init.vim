@@ -1,0 +1,13 @@
+set mouse=a
+set number
+set shiftwidth=4
+set tabstop=4
+set nobackup
+set nowrap
+set ignorecase
+set smartcase
+set showcmd
+set showmode
+set showmatch
+set hlsearch
+set history=1024
