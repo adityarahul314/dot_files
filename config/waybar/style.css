@@ -1,0 +1,53 @@
+
+* {
+	font-size: 14px;
+	min-height: 0;
+	padding: 1px 0px 1px 0px;
+}
+
+window#waybar {
+	color: #6c757d;
+	background: #191919;
+	border: 1px solid rgba(100, 114, 125, 0.5);
+}
+
+#workspaces {
+	padding: 0px 50px 0px 10px;
+}
+#workspaces button {
+	color: #6c757d;
+	padding: 0px;
+}
+#workspaces button.focused {
+	color: #ffffff;
+}
+#cpu {
+	padding: 0px 20px 0px 0px;
+}
+#memory {
+	padding: 0px 20px 0px 0px;
+}
+#disk {
+	padding: 0px 20px 0px 0px;
+}
+#temperature {
+	padding: 0px 20px 0px 0px;
+}
+#pulseaudio {
+	padding: 0px 20px 0px 0px;
+}
+#custom-weather {
+	padding: 0px 20px 0px 0px;
+}
+#idle_inhibitor {
+	padding: 0px 20px 0px 0px;
+}
+#battery {
+	padding: 0px 20px 0px 0px;
+}
+#network {
+	padding: 0px 20px 0px 0px;
+}
+#clock {
+	padding: 0px 10px 0px 0px;
+}

@@ -1,0 +1,108 @@
+{
+	"layer": "top",
+	"position": "bottom",
+
+		"modules-left": ["sway/workspaces", "sway/mode","cpu","memory","disk","temperature"],
+		"modules-center": ["sway/window"],
+		"modules-right": ["network","custom/weather","pulseaudio","battery","clock","idle_inhibitor"],
+		"sway/window": {
+				"format": "[  {}  ]",
+        "max-length": 300,
+        "tooltip": false,
+				"rewrite": {
+					"(.*)Edge Dev": " Microsoft Edge",
+					"(.*)Atom": " Atom Text Editor",
+					"emily@8130u:~": " Gnome Terminal",
+					"  ": "Test"
+
+				}
+    },
+		"sway/workspaces": {
+				"format": "{icon}",
+				"persistent_workspaces": {
+					"1": [],
+					"2": [],
+					"3": [],
+					"4": [],
+					"5": [],
+					"6": [],
+					"7": [],
+					"8": [],
+					"9": []
+				},
+				"format-icons": {
+
+				}
+  	},
+		"cpu": {
+				"interval": 1,
+				"format": "{avg_frequency}GHz  ",
+				"max-length": 15
+		},
+		"memory": {
+				"interval": 1,
+				"format": "{used:0.1f}G/{total:0.1f}G  ",
+				"tooltip": false
+		},
+		"disk": {
+				"interval": 5,
+				"format": "{used}/{total}  ",
+				"tooltip": false
+		},
+		"temperature": {
+				"interval": 2,
+				"format": "{temperatureC}°C  ",
+				"tooltip": false
+		},
+		"pulseaudio": {
+		    "format": "{volume}% {icon}",
+		    "format-bluetooth": "{volume}% {icon}",
+		    "format-muted": "",
+		    "format-icons": {
+		        "headphone": "",
+		        "hands-free": "",
+		        "headset": "",
+		        "phone": "",
+		        "portable": "",
+		        "car": "",
+		        "default": ["", ""]
+    		},
+		    "scroll-step": 1,
+		    "on-click": "amixer set Master toggle"
+		},
+		"custom/weather": {
+				"format": "{} ",
+				"exec": "curl 'https://wttr.in/chintalapudi?format=%C+%t+,++%h'",
+				"exec-if": "ping wttr.in -c1",
+				"interval": 60,
+				"tooltip": false
+		},
+		"battery": {
+        "format": "{capacity}%  {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": "{capacity}% ",
+        "interval": 10,
+        "tooltip": false
+    },
+		"idle_inhibitor": {
+		    "format": "{icon}",
+		    "format-icons": {
+		        "activated": "",
+		        "deactivated": ""
+		    },
+				"tooltip": false
+		},
+		"network": {
+		    "interface": "wlan0",
+		    "format": "{ifname}",
+		    "format-wifi": "{bandwidthUpBits}   {bandwidthDownBits}     {essid}  ",
+		    "format-ethernet": "{ipaddr}/{cidr} ",
+		    "format-disconnected": "Network Unavailable", //An empty format will hide the module.
+		    "tooltip-format-wifi": "{frequency}Ghz @ {signaldBm}dBm ( {ipaddr} )",
+				"interval": 1
+		},
+		"clock": {
+			"format": "{:%a %d %b %H:%M}",
+			"tooltip": false
+		}
+}

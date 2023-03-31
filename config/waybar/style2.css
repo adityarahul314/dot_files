@@ -1,0 +1,31 @@
+
+
+* {
+	color: #ff0000;
+	font-size: 14px;
+	min-height: 0;
+}
+
+window#waybar {
+	color: #6c757d;
+	background: #212529;
+}
+
+#workspaces {
+	padding: 3px 3px;
+}
+#workspaces button {
+	color: #3282B8;
+	padding: 0px;
+}
+#workspaces button.focused {
+	color: #ffffff;
+}
+#battery {
+	color: #0077b6;
+	padding: 0px 10px 0px 10px;
+}
+#clock {
+	color: #00b4d8;
+	padding-right: 10px;
+}
